@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const navItems = ["ABOUT ME", "RESUME", "PROJECTS", "CONTACT"];
+const navItems = [
+  { label: "ABOUT ME", href: "#about-me" },
+  { label: "PROJECTS", href: "#projects" },
+  { label: "SKILLS", href: "#skills" },
+  { label: "RESUME", href: "#resume" },
+  { label: "AWARDS", href: "#awards" },
+  { label: "CONTACT", href: "#contact" },
+];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,21 +18,21 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 bg-primary" />
-          <span className="font-heading font-bold text-lg text-foreground">Maya Nelson</span>
+          <span className="font-heading font-bold text-lg text-foreground">Bhavya Dixit</span>
           <span className="text-muted-foreground font-label text-xs tracking-widest hidden sm:inline">
-            / PROJECT MANAGER
+            / Product and Data Enthusiast
           </span>
         </div>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <li key={item}>
+            <li key={item.label}>
               <a
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                href={item.href}
                 className="font-label text-xs tracking-wider text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item}
+                {item.label}
               </a>
             </li>
           ))}
@@ -33,6 +40,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
+          type="button"
           className="md:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
@@ -46,13 +54,13 @@ const Navbar = () => {
         <div className="md:hidden bg-background border-b border-border px-6 py-4">
           <ul className="flex flex-col gap-4">
             {navItems.map((item) => (
-              <li key={item}>
+              <li key={item.label}>
                 <a
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  href={item.href}
                   className="font-label text-xs tracking-wider text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </a>
               </li>
             ))}
