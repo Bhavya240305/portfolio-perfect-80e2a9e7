@@ -10,23 +10,24 @@ html {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    /* Warm Sand */
+    --background: 36 43% 97%;
+    --foreground: 28 38% 9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card: 33 32% 91%;
+    --card-foreground: 28 38% 9%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 30 30% 48%;
+    --primary-foreground: 36 43% 97%;
 
-    --secondary: 30 25% 90%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 33.7 42.1% 89.9%;
+    --secondary-foreground: 28 38% 9%;
 
-    --muted: 30 15% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 33 32% 91%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 30 25% 88%;
     --accent-foreground: 0 0% 15%;
@@ -34,9 +35,9 @@ html {
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 0 0% 10%;
+    --border: 33 18% 84%;
+    --input: 33 18% 84%;
+    --ring: 30 30% 48%;
 
     --radius: 0px;
 
