@@ -3,7 +3,7 @@ import { Mail, Linkedin, Phone } from "lucide-react";
 // Option 1: Put your photo in src/assets/ and import it like this:
 // import profilePhoto from "@/assets/your-photo.jpg";
 // Option 2: Use a URL string directly in the src attribute below
-import profilePhoto from "@/assets/with background_copy.png";
+import profilePhoto from "@/assets/formal.png";
 
 const HeroSection = () => {
   return (
