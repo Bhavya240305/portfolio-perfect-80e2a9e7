@@ -18,12 +18,24 @@ const Footer = () => {
           <div className="text-center">
             <p className="font-label text-xs tracking-wider text-foreground mb-1">Write</p>
             {/* ✏️ EDIT: Replace email */}
-            <p className="font-body text-xs text-muted-foreground">bhavyadixit.iitr@gmail.com</p>
+            <a
+              href="mailto:bhavyadixit.iitr@gmail.com"
+              className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors underline-offset-2 hover:underline"
+            >
+              bhavyadixit.iitr@gmail.com
+            </a>
           </div>
           <div className="text-center">
             <p className="font-label text-xs tracking-wider text-foreground mb-1">Follow</p>
             {/* ✏️ EDIT: Replace social handle */}
-            <p className="font-body text-xs text-muted-foreground">www.linkedin.com/in/bhavyadixit/</p>
+            <a
+              href="https://www.linkedin.com/in/bhavyadixit/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors underline-offset-2 hover:underline"
+            >
+              linkedin.com/in/bhavyadixit
+            </a>
           </div>
         </div>
 
