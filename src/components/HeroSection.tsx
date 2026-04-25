@@ -38,7 +38,7 @@ const HeroSection = () => {
                 <div className="w-10 h-0.5 bg-primary my-4" />
 
                 <p className="font-label text-xs tracking-[0.3em] text-muted-foreground text-center">
-                  Product and Data Enthusiast
+                  Product and Data Analyst
                 </p>
               </div>
 
@@ -72,10 +72,10 @@ const HeroSection = () => {
             {/* Hero Content */}
             <div className="flex-1 max-w-md lg:max-w-lg animate-fade-in">
               <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground mb-4">
-                Hi,
+                Hi, I'm Bhavya
               </h1>
               <p className="font-body text-lg text-foreground mb-8">
-              Building data-informed products that solve real problems and create meaningful impact.
+              I built data-driven products and dashboards that turn complex data into clear decisions
               </p>
 
               <div className="flex gap-4 mb-10">
@@ -94,15 +94,12 @@ const HeroSection = () => {
               </div>
 
               <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
-                I&apos;m Bhavya Dixit, an undergraduate at IIT Roorkee with a strong interest in product management, data
-                analytics, and business strategy. I enjoy understanding user needs, analyzing data to uncover insights,
-                and translating them into scalable, user-centric product solutions.
+                I&apos;m an undergraduate at IIT Roorkee working at the intersection of product, analytics and strategy.
+I&apos;ve worked on real-world datasets, built dashboards, and solved problems across domains like e-commerce, education, and travel.
+
               </p>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                Through my work across domains like education, e-commerce, and travel, I&apos;ve developed a product
-                mindset—focusing on solving real problems, improving user experiences, and driving meaningful impact.
-                I&apos;m particularly interested in building data-informed products at the intersection of product,
-                analytics, and strategy.
+              I enjoy breaking down ambiguous problems, finding patterns in data, and turning insights into scalable, user-centric solutions.
               </p>
             </div>
 

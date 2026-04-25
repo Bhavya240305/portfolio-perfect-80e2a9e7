@@ -2,17 +2,17 @@
 const skillCategories = [
   {
     category: "Tech Stack",
-    skills: ["Python", "Pytorch", "Tensorflow", "SQL","R", "C", "C++"
+    skills: ["Python", "Pytorch", "Tensorflow", "SQL","R"
     ],
   },
   {
     category: "Tools",
-    skills: [ "Power BI", "Excel", "PowerPoint", "Figma","Canva"
+    skills: [ "Power BI", "Advanced Excel", "PowerPoint", "Figma","Canva"
     ],
   },
   {
     category: "Soft Skills",
-    skills: ["Leadership", "Communication", "Team-Coordination", "Time Management", "Critical Thinking", "Adaptability", "Decision Making"],
+    skills: ["Leadership", "Communication", "Team-Coordination", "Adaptability", "Decision Making"],
   }
 ];
 

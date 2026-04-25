@@ -34,7 +34,7 @@ const experience = [
 
 const education = [
   {
-    degree: "Undergraduation",   // ✏️ Your degree
+    degree: "Undergraduate",   // ✏️ Your degree
     institution: "Indian Institute of Technology, Roorkee",       // ✏️ Your institution
     period: "Aug'23 – Present",                    // ✏️ Years attended
     description: `Chemical Sciences

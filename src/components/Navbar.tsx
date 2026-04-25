@@ -20,12 +20,12 @@ const Navbar = () => {
           <div className="w-3 h-3 bg-primary" />
           <span className="font-heading font-bold text-lg text-foreground">Bhavya Dixit</span>
           <span className="text-muted-foreground font-label text-xs tracking-widest hidden sm:inline">
-            / Product and Data Enthusiast
+            / Product and Data Analyst
           </span>
         </div>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <li key={item.label}>
               <a

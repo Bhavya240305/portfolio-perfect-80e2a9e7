@@ -6,8 +6,9 @@ const AwardsSection = () => {
     <section id="awards" className="py-24 px-6 md:px-12 bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
+          <p className="font-label text-xs tracking-[0.3em] text-muted-foreground mb-3">ACHIEVEMENTS</p>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground">
-            Awards & Certifications
+            Awards and Certifications
           </h2>
           <div className="w-12 h-0.5 bg-primary mt-6" />
         </div>
