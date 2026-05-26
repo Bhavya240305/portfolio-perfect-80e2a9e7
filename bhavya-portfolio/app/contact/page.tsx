@@ -10,10 +10,10 @@ const contactMethods = [
     title: "Email",
     content: (
       <Link
-        href={`mailto:${SITE_CONFIG.email}`}
+        href={`mailto:bhavyadixit.iitr@gmail.com`}
         className="link-underline mt-3 inline-flex min-h-11 items-center break-all text-base font-medium text-primary sm:mt-4 sm:text-lg"
       >
-        {SITE_CONFIG.email}
+        bhavyadixit.iitr@gmail.com
       </Link>
     ),
   },
@@ -21,7 +21,7 @@ const contactMethods = [
     title: "Phone",
     content: (
       <p className="mt-3 text-base font-medium text-primary sm:mt-4 sm:text-lg">
-        {SITE_CONFIG.phone}
+        8218973640
       </p>
     ),
   },
@@ -29,12 +29,12 @@ const contactMethods = [
     title: "LinkedIn",
     content: (
       <Link
-        href={SITE_CONFIG.linkedin}
-        target="_blank"
+        href="https://www.linkedin.com/in/bhavyadixit/"
+        target="Linkedin"
         rel="noopener noreferrer"
         className="link-underline mt-3 inline-flex min-h-11 items-center text-base font-medium text-primary sm:mt-4 sm:text-lg"
       >
-        Connect ↗
+        linkedin.com/in/bhavyadixit/
       </Link>
     ),
   },
@@ -47,7 +47,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Contact"
           title="Let’s Connect"
-          description="Open to product conversations, collaborations, internships, and strategic opportunities."
+          description="Open to product conversations, collaborations, internships, and strategic opportunities"
         />
       </MotionWrapper>
 

@@ -1,6 +1,5 @@
 "use client";
 
-import type { ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,49 +16,31 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { RESUME_DRIVE_URL } from "@/lib/constants";
 
-const navItems = [
+const navLinkClass =
+  "text-sm text-foreground/80 transition hover:text-primary";
+
+type NavItem = {
+  name: string;
+  href: string;
+  external?: boolean;
+  download?: boolean;
+};
+
+const navItems: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Resume", href: "/resume" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Resume", href: RESUME_DRIVE_URL, external: true },
   { name: "Contact", href: "/contact" },
 ];
 
-function NavLink({
-  href,
-  children,
-  active,
-  onClick,
-}: {
-  href: string;
-  children: ReactNode;
-  active: boolean;
-  onClick?: () => void;
-}) {
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={cn(
-        "nav-link group",
-        active ? "nav-link-active" : "nav-link-inactive"
-      )}
-    >
-      <span className="relative">
-        {children}
-        <span
-          className={cn(
-            "absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-primary transition-transform duration-300",
-            active && "scale-x-100",
-            "group-hover:scale-x-100"
-          )}
-          aria-hidden
-        />
-      </span>
-    </Link>
-  );
+function isNavActive(pathname: string, href: string) {
+  if (href === "/#skills") return pathname === "/";
+  if (href.startsWith("http")) return false;
+  return pathname === href;
 }
 
 export function Navbar() {
@@ -100,18 +81,42 @@ export function Navbar() {
           </Link>
 
           <nav
-            className="hidden items-center gap-1 lg:flex lg:gap-2"
+            className="hidden gap-8 md:flex"
             aria-label="Main navigation"
           >
-            {navItems.map((item) => (
-              <NavLink
-                key={item.name}
-                href={item.href}
-                active={pathname === item.href}
-              >
-                {item.name}
-              </NavLink>
-            ))}
+            {navItems.map((item) =>
+              item.download ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  download
+                  className={navLinkClass}
+                >
+                  {item.name}
+                </a>
+              ) : item.external ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={navLinkClass}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    navLinkClass,
+                    isNavActive(pathname, item.href) && "text-primary"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
@@ -126,7 +131,7 @@ export function Navbar() {
             <ThemeToggle />
 
             <Sheet open={open} onOpenChange={setOpen}>
-              <SheetTrigger asChild className="lg:hidden">
+              <SheetTrigger asChild className="md:hidden">
                 <Button variant="secondary" size="icon" aria-label="Open menu">
                   <Menu className="h-5 w-5" />
                 </Button>
@@ -149,18 +154,39 @@ export function Navbar() {
                       animate={{ opacity: open ? 1 : 0, x: open ? 0 : 12 }}
                       transition={{ delay: open ? i * 0.04 : 0, duration: 0.25 }}
                     >
-                      <Link
-                        href={item.href}
-                        onClick={() => setOpen(false)}
-                        className={cn(
-                          "flex min-h-12 items-center rounded-2xl px-4 text-base font-medium transition-colors",
-                          pathname === item.href
-                            ? "bg-primary/15 text-primary"
-                            : "text-foreground active:bg-card/60"
-                        )}
-                      >
-                        {item.name}
-                      </Link>
+                      {item.download ? (
+                        <a
+                          href={item.href}
+                          download
+                          onClick={() => setOpen(false)}
+                          className="flex min-h-12 items-center rounded-2xl px-4 text-base font-medium text-foreground transition-colors active:bg-card/60"
+                        >
+                          {item.name}
+                        </a>
+                      ) : item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setOpen(false)}
+                          className="flex min-h-12 items-center rounded-2xl px-4 text-base font-medium text-foreground transition-colors active:bg-card/60"
+                        >
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={() => setOpen(false)}
+                          className={cn(
+                            "flex min-h-12 items-center rounded-2xl px-4 text-base font-medium transition-colors",
+                            isNavActive(pathname, item.href)
+                              ? "bg-primary/15 text-primary"
+                              : "text-foreground active:bg-card/60"
+                          )}
+                        >
+                          {item.name}
+                        </Link>
+                      )}
                     </motion.div>
                   ))}
                 </nav>

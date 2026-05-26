@@ -6,52 +6,46 @@ import { GlassCard } from "./glass-card";
 
 const skillGroups = [
   {
-    title: "Product",
+    title: "Tech and Tools",
     skills: [
-      "Product Strategy",
-      "User Research",
-      "Prioritization",
-      "Roadmapping",
-      "Experimentation",
-      "Problem Framing",
-    ],
-  },
-  {
-    title: "Analytics",
-    skills: [
-      "SQL",
       "Python",
+      "SQL",
+      "R",
+      "SaaS",
       "Power BI",
-      "Excel",
-      "Data Analysis",
-      "Dashboarding",
+      "Advanced Excel",
+      "Powerpoint",
+      "Figma",
+      "Canva",
+      "Cursor",
+      "Claude",
     ],
   },
   {
-    title: "Execution",
+    title: "Soft Skills",
     skills: [
-      "Stakeholder Management",
+      "Effective Communication",
       "Leadership",
-      "Communication",
-      "Cross-functional Collaboration",
-      "Growth Thinking",
-      "Strategic Decision Making",
+      "Teamwork",
+      "Adaptability",
+      "Time Management",
+      "Problem Solving",
+      "Decision Making",
+      
     ],
   },
 ];
 
 export function Skills() {
   return (
-    <Section>
+    <Section id="skills" className="py-28">
       <MotionWrapper>
         <SectionHeading
-          eyebrow="Capabilities"
-          title="Skills & Toolkit"
-          description="A blend of product thinking, analytics, and execution capabilities."
+          eyebrow="Skills"
         />
       </MotionWrapper>
 
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-2">
         {skillGroups.map((group, i) => (
           <MotionWrapper key={group.title} delay={i * 0.06}>
             <GlassCard interactive className="h-full">

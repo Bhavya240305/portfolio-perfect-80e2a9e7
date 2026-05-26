@@ -3,6 +3,7 @@ import { Container } from "./container";
 import { Button } from "@/components/ui/button";
 import { MotionWrapper } from "./motion-wrapper";
 import { GlassCard } from "./glass-card";
+import { RESUME_PDF_URL } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -47,7 +48,9 @@ export function Hero() {
                   size="lg"
                   className="w-full sm:flex-1"
                 >
-                  <Link href="/resume">Download Resume</Link>
+                  <a href={RESUME_PDF_URL} download>
+                    Download Resume
+                  </a>
                 </Button>
               </div>
             </div>

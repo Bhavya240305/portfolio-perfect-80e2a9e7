@@ -22,9 +22,9 @@ export default async function CaseStudyPage({
 
   const sections = [
     { title: "Problem Context", content: project.problem },
-    { title: "User & Market Insights", content: project.insights },
-    { title: "Strategic Thinking", content: project.strategy },
-    { title: "Solution Approach", content: project.solution },
+    { title: "Approach", content: project.insights },
+    { title: "Solution", content: project.strategy },
+    { title: "Impact", content: project.solution },
     { title: "Key Learnings", content: project.learnings },
   ] as const;
 

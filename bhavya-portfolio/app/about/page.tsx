@@ -7,17 +7,17 @@ const values = [
   {
     title: "User-Centric Thinking",
     description:
-      "I believe strong products begin with deeply understanding user needs, behaviors, and friction points.",
+      "I believe strong products begin with deeply understanding user needs, behaviors, pain points, and decision-making patterns.",
   },
   {
     title: "Strategic Execution",
     description:
-      "I enjoy translating ambiguity into structured decisions, experiments, and measurable execution.",
+      "I enjoy translating ambiguity into structured decisions, prioritization frameworks, experiments, and measurable execution.",
   },
   {
     title: "Data-Driven Decision Making",
     description:
-      "Analytics helps validate assumptions, uncover patterns, and sharpen product direction.",
+      "Analytics helps validate assumptions, uncover patterns, and sharpen product direction through evidence-backed insights.",
   },
 ];
 
@@ -36,17 +36,11 @@ export default function AboutPage() {
         <MotionWrapper>
           <div className="space-y-6 sm:space-y-7">
             <p className="text-body-lg text-muted-foreground">
-              My journey has been shaped by leadership, strategic initiatives,
-              and a deep interest in understanding how products create value.
-              Through student leadership, case studies, analytics projects, and
-              growth explorations, I’ve developed a product mindset grounded in
-              curiosity, execution, and structured problem solving.
+            I’ve always been fascinated by the intersection of user behavior, business strategy, and product execution. My journey through leadership initiatives, product case studies, analytics projects, and strategic collaborations has helped me develop a mindset that balances curiosity with structured execution.
             </p>
 
             <p className="text-body-lg text-muted-foreground">
-              From product redesigns to growth strategy and analytics-led
-              optimization, I enjoy navigating ambiguity and transforming ideas
-              into actionable outcomes.
+Whether it’s re-thinking a product experience, identifying growth opportunities, or solving operational inefficiencies through data, I enjoy breaking down ambiguity into clear decisions and actionable product thinking. I aspire to build products that are not only functional, but meaningful, intuitive, and impactful.
             </p>
           </div>
         </MotionWrapper>
