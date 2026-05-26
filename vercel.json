@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "npm ci --prefix bhavya-portfolio",
-  "buildCommand": "npm run build --prefix bhavya-portfolio"
+  "buildCommand": "cd bhavya-portfolio && STATIC_EXPORT=true npm run build",
+  "outputDirectory": "bhavya-portfolio/out"
 }
