@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
+import { Linkedin, Mail, Phone } from "lucide-react";
 import { Container } from "./container";
 import { Button } from "@/components/ui/button";
 import { MotionWrapper } from "./motion-wrapper";
-import { GlassCard } from "./glass-card";
-import { RESUME_PDF_URL } from "@/lib/constants";
+import { RESUME_PDF_URL, SITE_CONFIG } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -23,12 +24,14 @@ export function Hero() {
               <p className="text-eyebrow mb-4 sm:mb-5">Product & Data Analyst</p>
 
               <h1 className="font-serif text-display-lg text-foreground">
-                Hi, I&apos;m Bhavya
+                Hi, I&apos;m Bhavya - I turn
+                <span className="font-medium text-primary"> data</span>{" "} into
+                <span className="font-medium text-primary"> decisions</span>
                 <br />
               </h1>
 
               <p className="text-body-lg mt-5 max-w-xl text-muted-foreground sm:mt-7">
-                An IIT Roorkee student specializing in analytics and product
+                I&apos;m an IIT Roorkee student specializing in analytics and product
                 thinking, transforming complex data and ambiguous problems into
                 <span className="font-medium text-primary"> clear insights</span>{" "}
                 and
@@ -57,22 +60,52 @@ export function Hero() {
           </MotionWrapper>
 
           <MotionWrapper delay={0.08} className="w-full">
-            <GlassCard large className="w-full">
-              <div
-                className="mb-6 aspect-[5/4] w-full overflow-hidden rounded-2xl border border-border/10 bg-gradient-to-br from-primary/25 via-primary/10 to-transparent sm:mb-8 sm:aspect-[16/10] sm:rounded-3xl lg:aspect-auto lg:h-60 xl:h-72"
-                aria-hidden
-              >
-                <div className="h-full w-full bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.35),transparent_55%)]" />
+            <div className="relative">
+              <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-glow backdrop-blur-xl">
+                <div className="mx-auto max-w-[360px]">
+                  <div className="overflow-hidden rounded-[2rem] border border-white/10">
+                    <div className="relative aspect-[3/4] w-full">
+                      <Image
+                        src="/images/profile.jpg"
+                        alt="Bhavya Dixit"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                        sizes="(max-width: 360px) 100vw, 360px"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mt-8 flex items-center justify-center gap-10">
+                    <Link
+                      href={SITE_CONFIG.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="text-white/70 transition hover:scale-110 hover:text-primary"
+                    >
+                      <Linkedin size={30} strokeWidth={1.8} />
+                    </Link>
+
+                    <Link
+                      href={`mailto:${SITE_CONFIG.email}`}
+                      aria-label="Email"
+                      className="text-white/70 transition hover:scale-110 hover:text-primary"
+                    >
+                      <Mail size={30} strokeWidth={1.8} />
+                    </Link>
+
+                    <Link
+                      href={`tel:${SITE_CONFIG.phone}`}
+                      aria-label="Phone"
+                      className="text-white/70 transition hover:scale-110 hover:text-primary"
+                    >
+                      <Phone size={30} strokeWidth={1.8} />
+                    </Link>
+                  </div>
+                </div>
               </div>
-
-              <blockquote className="text-body-lg font-medium leading-snug text-foreground">
-                “I turn data into decisions.”
-              </blockquote>
-
-              <p className="mt-4 text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-muted-foreground sm:mt-5 sm:text-xs sm:tracking-[0.2em]">
-                Product × Strategy × Analytics
-              </p>
-            </GlassCard>
+            </div>
           </MotionWrapper>
         </div>
       </Container>

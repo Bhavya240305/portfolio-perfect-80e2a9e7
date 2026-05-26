@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { projects } from "@/lib/projects";
+import { projects, type ProjectContent } from "@/lib/projects";
 import { CaseStudyHero } from "@/components/case-study-hero";
 import { CaseStudySection } from "@/components/case-study-section";
 import { PDFPreviewCard } from "@/components/pdf-preview-card";
@@ -20,13 +20,17 @@ export default async function CaseStudyPage({
 
   if (!project) return notFound();
 
-  const sections = [
+  const sections: { title: string; content: ProjectContent }[] = [
     { title: "Problem Context", content: project.problem },
     { title: "Approach", content: project.insights },
     { title: "Solution", content: project.strategy },
     { title: "Impact", content: project.solution },
-    { title: "Key Learnings", content: project.learnings },
-  ] as const;
+    {
+      title:
+        project.slug === "sql-inventory" ? "Live Dashboard" : "Key Learnings",
+      content: project.learnings,
+    },
+  ];
 
   return (
     <>
@@ -48,7 +52,15 @@ export default async function CaseStudyPage({
 
       <Section divider className="pt-0">
         <MotionWrapper>
-          <PDFPreviewCard title={project.title} pdf={project.pdf} />
+          <PDFPreviewCard
+            title={project.title}
+            pdf={project.pdf}
+            ctaLabel={
+              project.slug === "sql-inventory"
+                ? "View Live Dashboard ↗"
+                : "View Full PDF ↗"
+            }
+          />
         </MotionWrapper>
       </Section>
     </>

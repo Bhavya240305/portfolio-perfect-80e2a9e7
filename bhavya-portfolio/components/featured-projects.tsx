@@ -9,9 +9,7 @@ export function FeaturedProjects() {
     <Section>
       <MotionWrapper>
         <SectionHeading
-          eyebrow="Case Studies"
-          title="Selected Work"
-          description="Strategic product and analytics explorations focused on real-world decision making."
+          eyebrow="Projects"
         />
       </MotionWrapper>
 

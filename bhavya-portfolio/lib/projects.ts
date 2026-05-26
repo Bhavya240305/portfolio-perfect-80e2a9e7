@@ -25,7 +25,7 @@ export const projects: Project[] = [
       "Improving retention & differentiation for 80M+ MAU platform",
     shortDescription:
       "Improving retention & differentiation for 80M+ MAU platform",
-    category: "Product",
+    category: "Product Teardown",
     timeline: "IIT Guwahati",
     role: "Product Teardown",
     pdf: "https://drive.google.com/file/d/1hzi1gNpuEAaMev2OcmiGspVvbZsEOwKg/view?usp=drive_link",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
       "Data-driven model to improve farmer income & reduce wastage",
     shortDescription:
       "Data-driven model to improve farmer income & reduce wastage",
-    category: "Strategy",
+    category: "Consulting & Analytics",
     timeline: "IIT Roorkee",
     role: "Consulting & Analytics",
     pdf: "https://drive.google.com/file/d/1DGinC7ZWReqJWoVcXh0zr5OjoVmXEh7f/view?usp=drive_link",
@@ -107,9 +107,9 @@ strategy:[
       "Optimizing inventory decisions using data-driven insights",
     shortDescription:
       "Optimizing inventory decisions using data-driven insights",
-    category: "Analytics",
+    category: "Data Analysis & Visualisation",
     timeline: "IIT Guwahati",
-    role: "Analytics",
+    role: "Analytics & Visualisation",
     pdf: "https://app.powerbi.com/groups/me/reports/61d3a757-af12-4af0-88a4-f48eb8516ea9/f3828b4808e23ec6a700?experience=power-bi",
     problem: [
       "Businesses often struggle with inefficient inventory management due to lack of real-time visibility into stock levels, demand trends, and product performance. This leads to overstocking, stockouts, and lost revenue opportunities.",
@@ -147,7 +147,7 @@ strategy:[
       "Repositioning for Gen Z & Tier 2 market expansion",
     shortDescription:
       "Repositioning for Gen Z & Tier 2 market expansion",
-    category: "Growth",
+    category: "Growth & Strategy",
     timeline: "IIT Kharagpur",
     role: "Growth Strategist",
     pdf: "https://drive.google.com/file/d/1PIe79S00SB9eZyckwrxxBG0wd5Y27INr/view?usp=drive_link",

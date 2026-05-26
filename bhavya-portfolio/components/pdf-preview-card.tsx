@@ -5,9 +5,11 @@ import { GlassCard } from "./glass-card";
 export function PDFPreviewCard({
   pdf,
   title,
+  ctaLabel = "View Full PDF ↗",
 }: {
   pdf: string;
   title: string;
+  ctaLabel?: string;
 }) {
   return (
     <GlassCard large className="w-full">
@@ -27,7 +29,7 @@ export function PDFPreviewCard({
 
       <Button asChild size="lg" className="mt-6 w-full sm:mt-8 sm:w-auto">
         <Link href={pdf} target="_blank" rel="noopener noreferrer">
-          View Full PDF ↗
+          {ctaLabel}
         </Link>
       </Button>
     </GlassCard>
