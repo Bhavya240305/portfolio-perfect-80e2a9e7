@@ -1,8 +1,7 @@
 export const SITE_CONFIG = {
   name: "Bhavya Dixit",
   title: "Aspiring Product Manager",
-  description:
-    "Building user-centric products through strategy, experimentation, and data-backed execution.",
+  description: "Product x Growth x Strategy x Analytics",
   email: "bhavyadixit.iitr@gmail.com",
   phone: "+918218973640",
   linkedin: "https://linkedin.com/in/bhavyadixit/",

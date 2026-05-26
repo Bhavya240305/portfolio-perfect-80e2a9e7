@@ -6,7 +6,7 @@ import { GlassCard } from "./glass-card";
 
 const skillGroups = [
   {
-    title: "Tech and Tools",
+    title: "Tech & Tools",
     skills: [
       "Python",
       "SQL",
@@ -38,7 +38,7 @@ const skillGroups = [
 
 export function Skills() {
   return (
-    <Section id="skills" className="py-28">
+    <Section id="skills">
       <MotionWrapper>
         <SectionHeading
           eyebrow="Skills"
@@ -51,7 +51,7 @@ export function Skills() {
             <GlassCard interactive className="h-full">
               <h3 className="font-serif text-heading-sm">{group.title}</h3>
 
-              <div className="mt-5 flex flex-wrap gap-2 sm:mt-6">
+              <div className="mt-4 flex flex-wrap gap-2 md:mt-5">
                 {group.skills.map((skill) => (
                   <Badge key={skill} variant="chip">
                     {skill}

@@ -21,11 +21,7 @@ export function PDFPreviewCard({
       </div>
 
       <h3 className="font-serif text-heading-sm sm:text-heading">{title}</h3>
-
-      <p className="text-body mt-3 max-w-2xl text-muted-foreground sm:mt-4">
-        Detailed walkthrough of research, strategy, frameworks, execution, and
-        decision-making.
-      </p>
+  
 
       <Button asChild size="lg" className="mt-6 w-full sm:mt-8 sm:w-auto">
         <Link href={pdf} target="_blank" rel="noopener noreferrer">

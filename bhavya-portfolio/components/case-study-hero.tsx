@@ -16,7 +16,7 @@ export function CaseStudyHero({
   category: string;
 }) {
   return (
-    <section className="section-padding pb-10 sm:pb-14 md:pb-16">
+    <section className="section-padding">
       <Container>
         <BackLink />
         <p className="text-eyebrow mb-4 sm:mb-5">{category}</p>
@@ -25,7 +25,7 @@ export function CaseStudyHero({
           {title}
         </h1>
 
-        <p className="text-body-lg prose-width mt-5 text-muted-foreground sm:mt-7">
+        <p className="text-body-lg prose-width mt-6 text-muted-foreground md:mt-8">
           {description}
         </p>
 

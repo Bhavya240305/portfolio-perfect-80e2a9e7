@@ -17,7 +17,7 @@ export function ProjectsGrid() {
     <>
       <ProjectsFilter active={active} setActive={setActive} />
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.slug}

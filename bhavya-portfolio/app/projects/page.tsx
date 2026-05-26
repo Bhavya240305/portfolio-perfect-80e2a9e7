@@ -9,8 +9,8 @@ export default function ProjectsPage() {
       <MotionWrapper>
         <SectionHeading
           eyebrow="Projects"
-          title="Case Studies & Strategic Work"
-          description="A curated collection of product, growth, analytics, and strategy explorations."
+          title="Case studies built for product interviews"
+          description="Problem framing, approach, solution, and impact—documented the way PM teams evaluate thinking."
         />
       </MotionWrapper>
 

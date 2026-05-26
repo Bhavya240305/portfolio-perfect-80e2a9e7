@@ -19,9 +19,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Bhavya Dixit | Product Portfolio",
+  title: "Bhavya Dixit | Product Manager Portfolio",
   description:
-    "Building user-centric products through strategy, experimentation, and data-backed execution.",
+    "Product-minded builder turning user insight, strategy, and data into shipped decisions.",
 };
 
 export default function RootLayout({

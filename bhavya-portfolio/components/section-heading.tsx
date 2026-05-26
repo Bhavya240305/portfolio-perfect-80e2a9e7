@@ -18,7 +18,7 @@ export function SectionHeading({
   return (
     <header
       className={cn(
-        "mb-8 sm:mb-10 md:mb-14",
+        "mb-5 md:mb-6 lg:mb-7",
         centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl",
         className
       )}
@@ -37,7 +37,7 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            "text-body-lg mt-4 text-muted-foreground sm:mt-5",
+            "text-body-lg mt-4 text-muted-foreground md:mt-5",
             centered && "mx-auto max-w-2xl"
           )}
         >

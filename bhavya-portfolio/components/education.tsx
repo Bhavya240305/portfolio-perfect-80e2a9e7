@@ -32,10 +32,10 @@ export function Education() {
         <SectionHeading eyebrow="Education" />
       </MotionWrapper>
 
-      <div className="flex flex-col gap-5 md:gap-6">
+      <div className="flex flex-col gap-6 md:gap-8">
         {educationData.map((edu, i) => (
           <MotionWrapper key={edu.institution} delay={i * 0.06}>
-            <GlassCard interactive>
+            <GlassCard interactive className="p-6 md:p-10">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
                 <div className="shrink-0 lg:w-[min(100%,28rem)]">
                   <h3 className="font-serif text-heading-sm text-foreground">
@@ -44,7 +44,7 @@ export function Education() {
                   <p className="mt-2 text-sm font-medium text-primary sm:text-base">
                     {edu.degree}
                   </p>
-                  <Badge variant="chip" className="mt-4 sm:mt-5">
+                  <Badge variant="chip" className="mt-4 md:mt-5">
                     {edu.score}
                   </Badge>
                 </div>

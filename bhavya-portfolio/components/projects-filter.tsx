@@ -14,7 +14,7 @@ export function ProjectsFilter({
 }) {
   return (
     <div
-      className="-mx-1 mb-8 flex gap-2 overflow-x-auto px-1 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:mb-10 sm:flex-wrap sm:gap-3 md:mb-12 [&::-webkit-scrollbar]:hidden"
+      className="-mx-1 mb-6 flex gap-2 overflow-x-auto px-1 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:flex-wrap sm:gap-3 md:mb-8 [&::-webkit-scrollbar]:hidden"
       role="tablist"
       aria-label="Filter projects"
     >
