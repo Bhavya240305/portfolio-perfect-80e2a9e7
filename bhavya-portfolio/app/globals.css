@@ -156,8 +156,8 @@
   }
 
   .text-heading {
-    font-size: clamp(1.5rem, 2vw + 0.75rem, 2.35rem);
-    line-height: 1.15;
+    font-size: clamp(1.75rem, 2.5vw + 0.75rem, 2.5rem);
+    line-height: 1.12;
     letter-spacing: -0.02em;
   }
 
@@ -187,6 +187,15 @@
 
   .prose-width {
     @apply max-w-[62ch];
+  }
+
+  /** Shared reading width — centered, uses horizontal space on laptop+ */
+  .content-column {
+    @apply mx-auto w-full min-w-0 max-w-4xl xl:max-w-5xl;
+  }
+
+  .site-main {
+    @apply w-full min-w-0 overflow-x-clip;
   }
 
   .touch-target {

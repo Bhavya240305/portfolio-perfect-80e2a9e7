@@ -19,14 +19,14 @@ export function Hero() {
       </div>
 
       <Container className="relative">
-        <div className="grid items-center gap-8 md:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-14">
-          <MotionWrapper>
-            <div className="max-w-xl lg:max-w-none">
+        <div className="grid min-w-0 items-center gap-8 md:gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 xl:gap-14">
+          <MotionWrapper className="min-w-0">
+            <div className="min-w-0 max-w-xl lg:max-w-none">
               <p className="text-eyebrow mb-4 md:mb-5">
                 Aspiring Product Manager
               </p>
 
-              <h1 className="font-serif text-display-lg text-balance text-foreground">
+              <h1 className="break-words font-serif text-display-lg text-balance text-foreground">
                 Turning Ambiguity into{" "}
                 <span className="text-primary">Product Decisions</span>
               </h1>
@@ -57,7 +57,7 @@ export function Hero() {
             </div>
           </MotionWrapper>
 
-          <MotionWrapper delay={0.08} className="w-full lg:justify-self-end">
+          <MotionWrapper delay={0.08} className="min-w-0 w-full lg:justify-self-end">
             <div className="mx-auto w-full max-w-[min(100%,22rem)] lg:max-w-[20rem] xl:max-w-[22rem]">
               <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5 shadow-glow backdrop-blur-xl md:rounded-[2rem] md:p-6">
                 <div className="overflow-hidden rounded-[1.5rem] border border-white/10 md:rounded-[1.75rem]">

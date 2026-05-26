@@ -26,11 +26,10 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
+  { name: "Projects", href: "/#projects" },
   { name: "Skills", href: "/#skills" },
-  { name: "Resume", href: RESUME_PDF_URL, download: true },
-  { name: "Contact", href: "/contact" },
+  { name: "Resume", href: "https://drive.google.com/file/d/16ue6eEBFaP8EJwM9nM47e_2AoPLi3yJn/view?usp=drive_link", download: false},
+  { name: "Contact", href: "/#contact" },
 ];
 
 function renderNavItem(

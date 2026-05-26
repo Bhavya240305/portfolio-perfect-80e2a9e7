@@ -7,11 +7,7 @@ export default function ProjectsPage() {
   return (
     <Section first divider={false} className="pt-4 sm:pt-6">
       <MotionWrapper>
-        <SectionHeading
-          eyebrow="Projects"
-          title="Case studies built for product interviews"
-          description="Problem framing, approach, solution, and impact—documented the way PM teams evaluate thinking."
-        />
+        <SectionHeading title="PROJECTS" />
       </MotionWrapper>
 
       <ProjectsGrid />

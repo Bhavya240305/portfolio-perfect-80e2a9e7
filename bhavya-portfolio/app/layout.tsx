@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className="page-shell min-h-screen font-sans">
         <ThemeProvider>
           <Navbar />
-          <main className="min-h-screen pt-nav">{children}</main>
+          <main className="site-main min-h-screen pt-nav">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

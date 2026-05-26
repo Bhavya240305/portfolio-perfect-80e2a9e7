@@ -1,4 +1,3 @@
-import { CTASection } from "@/components/cta-section";
 import { Education } from "@/components/education";
 import { ExperiencePreview } from "@/components/experience-preview";
 import { FeaturedProjects } from "@/components/featured-projects";
@@ -13,7 +12,6 @@ export default function HomePage() {
       <ExperiencePreview />
       <Skills />
       <Education />
-      <CTASection />
     </>
   );
 }

@@ -5,12 +5,14 @@ export function SectionHeading({
   title,
   description,
   className,
+  titleClassName,
   align = "left",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title?: string;
   description?: string;
   className?: string;
+  titleClassName?: string;
   align?: "left" | "center";
 }) {
   const centered = align === "center";
@@ -23,11 +25,14 @@ export function SectionHeading({
         className
       )}
     >
-      <p className="text-eyebrow mb-3 sm:mb-4">{eyebrow}</p>
+      {eyebrow ? (
+        <p className="text-eyebrow mb-3 sm:mb-4">{eyebrow}</p>
+      ) : null}
       {title ? (
         <h2
           className={cn(
-            "font-serif text-heading text-foreground",
+            "font-serif text-foreground",
+            titleClassName ?? "text-heading",
             centered && "mx-auto"
           )}
         >

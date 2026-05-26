@@ -1,82 +1,89 @@
 import Link from "next/link";
-import { ArrowUpRight, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Linkedin, Mail, Phone } from "lucide-react";
 import { Container } from "./container";
+import { SectionHeading } from "./section-heading";
+import { GlassCard } from "./glass-card";
 import { Button } from "@/components/ui/button";
 import { SITE_CONFIG } from "@/lib/constants";
 
-const footerLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-];
+const contactLinks = [
+  {
+    href: SITE_CONFIG.linkedin,
+    label: "linkedin.com/in/bhavyadixit",
+    icon: Linkedin,
+    external: true,
+  },
+  {
+    href: `mailto:${SITE_CONFIG.email}`,
+    label: SITE_CONFIG.email,
+    icon: Mail,
+    external: false,
+  },
+  {
+    href: `tel:${SITE_CONFIG.phone}`,
+    label: SITE_CONFIG.phone,
+    icon: Phone,
+    external: false,
+  },
+] as const;
 
 export function Footer() {
   return (
-    <footer className="section-divider relative pb-safe">
-      <Container className="py-10 md:py-12 lg:py-14">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr] lg:items-start lg:gap-12">
-          <div>
-            <p className="font-serif text-heading-sm text-foreground">
-              {SITE_CONFIG.name}
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {SITE_CONFIG.title}
-            </p>
-            <p className="text-body mt-3 max-w-xs text-muted-foreground">
-              Product x Growth x Strategy x Analytics
-            </p>
-          </div>
+    <footer id="contact" className="section-divider section-padding pb-safe">
+      <Container>
+        <SectionHeading
+          eyebrow="Get in touch"
+          title="Let's work together"
+          titleClassName="text-heading-sm"
+          description="Open to internships, collaborations and high-impact product roles."
+          align="center"
+          className="mx-auto max-w-3xl"
+        />
 
-          <nav
-            className="flex flex-col gap-1 sm:gap-0.5"
-            aria-label="Footer navigation"
-          >
-            <p className="text-label mb-3">Explore</p>
-            {footerLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="link-underline flex min-h-11 items-center text-sm font-medium"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex flex-col gap-4 md:items-start lg:items-end lg:text-right">
-            <p className="text-label lg:ml-auto">Connect</p>
-            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap md:flex-col lg:items-end">
-              <a
-                href={`mailto:bhavyadixit.iitr@gmail.com`}
-                className="link-underline inline-flex min-h-11 items-center gap-2 text-sm font-medium"
-              >
-                <Mail className="h-4 w-4 shrink-0 text-primary" />
-                {SITE_CONFIG.email}
-              </a>
-              <Link
-                href={"https://linkedin.com/in/bhavyadixit/"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-underline inline-flex min-h-11 items-center gap-2 text-sm font-medium"
-              >
-                <Linkedin className="h-4 w-4 shrink-0 text-primary" />
-                LinkedIn
-                <ArrowUpRight className="h-3.5 w-3.5 opacity-60" />
-              </Link>
-            </div>
-            <Button asChild size="sm" className="w-full sm:w-auto lg:ml-auto">
-              <Link href="/contact">
-                Open to opportunities
-                <ArrowUpRight className="ml-1 h-3.5 w-3.5" />
-              </Link>
-            </Button>
-          </div>
+        <div className="mt-6 flex justify-center md:mt-7">
+          <Button asChild size="lg">
+            <Link href={`mailto:${SITE_CONFIG.email}`}>
+              Contact
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </Button>
         </div>
 
-        <p className="mt-8 border-t border-border/[0.06] pt-6 text-center text-xs text-muted-foreground sm:text-left">
-          © {new Date().getFullYear()} {SITE_CONFIG.name}. Crafted for product
-          roles.
+        <div className="mx-auto mt-8 flex max-w-2xl flex-col gap-4 md:mt-10">
+          {contactLinks.map(({ href, label, icon: Icon, external }) => (
+            <Link
+              key={label}
+              href={href}
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              className="group block rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              <GlassCard
+                interactive
+                className="flex min-w-0 items-center gap-4 !p-4 sm:!p-5"
+              >
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border/15 bg-card/60 transition group-hover:border-primary/30 group-hover:bg-primary/10 sm:h-12 sm:w-12">
+                  <Icon
+                    size={20}
+                    className="text-foreground/70 transition group-hover:text-primary"
+                    aria-hidden
+                  />
+                </div>
+                <span className="text-body min-w-0 flex-1 break-words font-medium text-foreground/85 transition group-hover:text-primary sm:break-normal">
+                  {label}
+                </span>
+                <ArrowUpRight
+                  className="ml-auto h-4 w-4 shrink-0 text-muted-foreground opacity-0 transition group-hover:text-primary group-hover:opacity-100"
+                  aria-hidden
+                />
+              </GlassCard>
+            </Link>
+          ))}
+        </div>
+
+        <p className="mt-8 border-t border-border/[0.07] pt-6 text-center text-xs text-muted-foreground md:mt-10">
+          © {new Date().getFullYear()} {SITE_CONFIG.name} · {SITE_CONFIG.title}
         </p>
       </Container>
     </footer>

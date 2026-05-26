@@ -3,7 +3,7 @@ import { projects, type ProjectContent } from "@/lib/projects";
 import { CaseStudyHero } from "@/components/case-study-hero";
 import { CaseStudySection } from "@/components/case-study-section";
 import { PDFPreviewCard } from "@/components/pdf-preview-card";
-import { Section } from "@/components/section";
+import { Container } from "@/components/container";
 import { MotionWrapper } from "@/components/motion-wrapper";
 
 export function generateStaticParams() {
@@ -42,27 +42,34 @@ export default async function CaseStudyPage({
         category={project.category}
       />
 
-      {sections.map((section) => (
-        <CaseStudySection
-          key={section.title}
-          title={section.title}
-          content={section.content}
-        />
-      ))}
+      <section className="section-padding pt-8 md:pt-10 lg:pt-12">
+        <Container>
+          <div className="content-column min-w-0">
+            {sections.map((section) => (
+              <CaseStudySection
+                key={section.title}
+                title={section.title}
+                content={section.content}
+              />
+            ))}
 
-      <Section divider className="pt-0">
-        <MotionWrapper>
-          <PDFPreviewCard
-            title={project.title}
-            pdf={project.pdf}
-            ctaLabel={
-              project.slug === "sql-inventory"
-                ? "View Live Dashboard ↗"
-                : "View Full PDF ↗"
-            }
-          />
-        </MotionWrapper>
-      </Section>
+            <MotionWrapper>
+              <div className="mt-8 w-full min-w-0 border-t border-border/[0.07] pt-8 md:mt-10 md:pt-10">
+                <PDFPreviewCard
+                  title={project.title}
+                  coverImage={project.coverImage}
+                  pdf={project.pdf}
+                  ctaLabel={
+                    project.slug === "sql-inventory"
+                      ? "View Live Dashboard ↗"
+                      : "View Full PDF ↗"
+                  }
+                />
+              </div>
+            </MotionWrapper>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

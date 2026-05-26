@@ -9,6 +9,8 @@ export type Project = {
   category: string;
   timeline: string;
   role: string;
+  /** Cover image from public/pdfs/ */
+  coverImage: string;
   pdf: string;
   problem: ProjectContent;
   insights: ProjectContent;
@@ -28,6 +30,7 @@ export const projects: Project[] = [
     category: "Product Teardown",
     timeline: "IIT Guwahati",
     role: "Product Teardown",
+    coverImage: "/pdfs/ixigo.png",
     pdf: "https://drive.google.com/file/d/1hzi1gNpuEAaMev2OcmiGspVvbZsEOwKg/view?usp=drive_link",
     problem: [
       "Ixigo is one of India’s fastest-growing online travel platforms with strong traction in Tier 2/3 cities. Despite high monthly active users, the platform struggles with retention and lacks strong product differentiation in a highly competitive OTA market.",
@@ -69,6 +72,7 @@ export const projects: Project[] = [
     category: "Consulting & Analytics",
     timeline: "IIT Roorkee",
     role: "Consulting & Analytics",
+    coverImage: "/pdfs/grapes.png",
     pdf: "https://drive.google.com/file/d/1DGinC7ZWReqJWoVcXh0zr5OjoVmXEh7f/view?usp=drive_link",
     problem:[
       "India’s grape industry has strong revenue potential but suffers from inefficiencies in supply chain, storage, and pricing systems. Farmers face unstable income despite high production capacity.",
@@ -110,6 +114,7 @@ strategy:[
     category: "Data Analysis & Visualisation",
     timeline: "IIT Guwahati",
     role: "Analytics & Visualisation",
+    coverImage: "/pdfs/inventory.png",
     pdf: "https://app.powerbi.com/groups/me/reports/61d3a757-af12-4af0-88a4-f48eb8516ea9/f3828b4808e23ec6a700?experience=power-bi",
     problem: [
       "Businesses often struggle with inefficient inventory management due to lack of real-time visibility into stock levels, demand trends, and product performance. This leads to overstocking, stockouts, and lost revenue opportunities.",
@@ -150,6 +155,7 @@ strategy:[
     category: "Growth & Strategy",
     timeline: "IIT Kharagpur",
     role: "Growth Strategist",
+    coverImage: "/pdfs/bodyshop.png",
     pdf: "https://drive.google.com/file/d/1PIe79S00SB9eZyckwrxxBG0wd5Y27INr/view?usp=drive_link",
     problem:[
       "The Body Shop, a global leader in ethical beauty, is facing declining relevance among younger audiences and increasing competition from digital-first D2C brands.",

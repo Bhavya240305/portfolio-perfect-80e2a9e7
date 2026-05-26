@@ -67,8 +67,8 @@ export function ExperiencePreview() {
                 />
 
                 <GlassCard interactive>
-                  <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
-                    <div className="shrink-0 lg:w-[min(100%,20rem)]">
+                  <div className="flex min-w-0 flex-col gap-4 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
+                    <div className="min-w-0 shrink-0 lg:w-[min(100%,20rem)]">
                       <h3 className="font-serif text-heading-sm">{exp.title}</h3>
                       <p className="mt-1.5 text-sm font-medium text-primary sm:text-base">
                         {exp.company}
@@ -76,7 +76,7 @@ export function ExperiencePreview() {
                       <p className="text-label mt-2">{exp.date}</p>
                     </div>
 
-                    <div className="lg:max-w-2xl lg:flex-1">
+                    <div className="min-w-0 lg:max-w-2xl lg:flex-1">
                       <p className="text-sm font-medium leading-snug text-foreground sm:text-[0.9375rem]">
                         <span className="text-primary">Impact · </span>
                         {exp.impact}

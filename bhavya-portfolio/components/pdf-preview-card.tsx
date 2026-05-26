@@ -1,33 +1,38 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GlassCard } from "./glass-card";
+import { CaseStudyCoverPreview } from "./case-study-cover-preview";
 
 export function PDFPreviewCard({
   pdf,
   title,
+  coverImage,
   ctaLabel = "View Full PDF ↗",
 }: {
   pdf: string;
   title: string;
+  coverImage: string;
   ctaLabel?: string;
 }) {
   return (
-    <GlassCard large className="w-full">
-      <div
-        className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border/10 sm:mb-8 sm:aspect-[16/9] sm:rounded-3xl md:h-52 md:aspect-auto lg:h-64"
-        aria-hidden
-      >
-        <div className="h-full w-full bg-gradient-to-br from-primary/30 via-primary/10 to-transparent" />
+    <div className="w-full min-w-0 overflow-hidden rounded-3xl border border-border/10 bg-card/40 shadow-glow-sm backdrop-blur-xl sm:rounded-4xl">
+      <CaseStudyCoverPreview src={coverImage} title={title} />
+
+      <div className="flex flex-col gap-4 border-t border-border/10 px-5 py-6 sm:px-7 sm:py-7 md:px-8">
+        <div>
+          <p className="text-eyebrow mb-2">Deliverable</p>
+          <h3 className="w-full min-w-0 break-words font-serif text-heading-sm leading-snug text-foreground">
+            {title}
+          </h3>
+        </div>
+
+        <Button asChild size="lg" className="w-full sm:w-auto sm:self-start">
+          <Link href={pdf} target="_blank" rel="noopener noreferrer">
+            {ctaLabel}
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </Button>
       </div>
-
-      <h3 className="font-serif text-heading-sm sm:text-heading">{title}</h3>
-  
-
-      <Button asChild size="lg" className="mt-6 w-full sm:mt-8 sm:w-auto">
-        <Link href={pdf} target="_blank" rel="noopener noreferrer">
-          {ctaLabel}
-        </Link>
-      </Button>
-    </GlassCard>
+    </div>
   );
 }
