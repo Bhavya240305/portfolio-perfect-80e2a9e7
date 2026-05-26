@@ -7,10 +7,9 @@ export const SITE_CONFIG = {
   linkedin: "https://linkedin.com/in/bhavyadixit/",
 };
 
-/** Resume PDF served from public/resume.pdf (download buttons). */
-export const RESUME_PDF_URL = "/resume.pdf";
-
-const RESUME_DRIVE_FILE_ID = "16ue6eEBFaP8EJwM9nM47e_2AoPLi3yJn";
+/** Download resume from public/pdfs/resume.pdf */
+export const RESUME_PDF_URL = "/pdfs/resume.pdf";
 
 /** View resume on Google Drive (navbar). */
-export const RESUME_DRIVE_URL = `https://drive.google.com/file/d/${RESUME_DRIVE_FILE_ID}/view?usp=drive_link`;
+export const RESUME_DRIVE_URL =
+  "https://drive.google.com/file/d/16ue6eEBFaP8EJwM9nM47e_2AoPLi3yJn/view?usp=drive_link";
