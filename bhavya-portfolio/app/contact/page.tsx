@@ -10,27 +10,30 @@ const contactMethods = [
     title: "Email",
     content: (
       <Link
-        href={`mailto:bhavyadixit.iitr@gmail.com`}
+        href={`mailto:${SITE_CONFIG.email}`}
         className="link-underline mt-3 inline-flex min-h-11 items-center break-all text-base font-medium text-primary sm:mt-4 sm:text-lg"
       >
-        bhavyadixit.iitr@gmail.com
+        {SITE_CONFIG.email}
       </Link>
     ),
   },
   {
     title: "Phone",
     content: (
-      <p className="mt-3 text-base font-medium text-primary sm:mt-4 sm:text-lg">
-        8218973640
-      </p>
+      <Link
+        href={`tel:${SITE_CONFIG.phone}`}
+        className="link-underline mt-3 inline-flex min-h-11 items-center text-base font-medium text-primary sm:mt-4 sm:text-lg"
+      >
+        {SITE_CONFIG.phone.replace("+91", "")}
+      </Link>
     ),
   },
   {
     title: "LinkedIn",
     content: (
       <Link
-        href="https://www.linkedin.com/in/bhavyadixit/"
-        target="Linkedin"
+        href={SITE_CONFIG.linkedin}
+        target="_blank"
         rel="noopener noreferrer"
         className="link-underline mt-3 inline-flex min-h-11 items-center text-base font-medium text-primary sm:mt-4 sm:text-lg"
       >

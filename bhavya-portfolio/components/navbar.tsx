@@ -60,21 +60,13 @@ function renderNavItem(
     );
   }
 
-  if (item.href === "/#skills") {
-    return (
-      <a
-        key={item.name}
-        href="/#skills"
-        className={linkClass}
-        onClick={onNavigate}
-      >
-        {item.name}
-      </a>
-    );
-  }
-
   return (
-    <Link key={item.name} href={item.href} className={linkClass} onClick={onNavigate}>
+    <Link
+      key={item.name}
+      href={item.href}
+      className={linkClass}
+      onClick={onNavigate}
+    >
       {item.name}
     </Link>
   );
