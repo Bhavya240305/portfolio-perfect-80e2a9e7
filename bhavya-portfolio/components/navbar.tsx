@@ -15,7 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { RESUME_PDF_URL } from "@/lib/constants";
+import { RESUME_DRIVE_URL } from "@/lib/constants";
 
 type NavItem = {
   name: string;
@@ -28,7 +28,7 @@ const navItems: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "/#projects" },
   { name: "Skills", href: "/#skills" },
-  { name: "Resume", href: "https://drive.google.com/file/d/16ue6eEBFaP8EJwM9nM47e_2AoPLi3yJn/view?usp=drive_link", download: false},
+  { name: "Resume", href: RESUME_DRIVE_URL, external: true },
   { name: "Contact", href: "/#contact" },
 ];
 
