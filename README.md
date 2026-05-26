@@ -24,9 +24,8 @@ The app lives in `bhavya-portfolio/` (Next.js). If Vercel still runs `vite build
 
 In [Vercel](https://vercel.com) → your project → **Settings**:
 
-1. **General → Root Directory** → set to `bhavya-portfolio` (required).
-2. **Build & Development** → **Framework Preset** → **Next.js**.
-3. **Build Command** → leave empty (use default) or `npm run build`. Remove any `vite build` override.
-4. **Install Command** → leave empty or `npm ci`.
+1. **Build & Development** → clear **Build Command** (remove `vite build`). Leave install/build empty to use `vercel.json`.
+2. **(Recommended)** **General → Root Directory** → `bhavya-portfolio` — then Vercel uses Next.js defaults from that folder.
+3. If Root Directory stays at repo root, the root `vercel.json` runs `npm run build --prefix bhavya-portfolio` instead of Vite.
 
-Redeploy after saving. `bhavya-portfolio/vercel.json` pins Next.js build settings once the root directory is correct.
+Redeploy after saving.
